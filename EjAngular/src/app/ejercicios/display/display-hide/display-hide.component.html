@@ -1,0 +1,18 @@
+<h1>Display/Hide</h1>
+<hr>
+
+<div class="row mb-4">
+  <div class="col">
+    <button type="button"
+            class="btn btn-primary float-start"
+            (click)="ensennar()">
+      Enseñar
+    </button>
+  </div>
+</div>
+
+<div class="row bg-info p-4" *ngIf="bool">
+  <div class="col">
+    <h1 class="text-center">Hello World!!!</h1>
+  </div>
+</div>

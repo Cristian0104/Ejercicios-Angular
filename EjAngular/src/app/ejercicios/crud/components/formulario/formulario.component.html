@@ -1,0 +1,160 @@
+<div class="row">
+  <div class="col">
+    <form
+      autocomplete="off"
+      [formGroup]="miFormulario"
+      (ngSubmit)="guardar()">
+
+      <!-- Nombre -->
+      <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Nombre</label>
+        <div class="col-sm-9">
+          <input
+            type="text"
+            formControlName="name"
+            class="form-control"
+            placeholder="Nombre*"
+          />
+
+          <span class="form-text text-danger" *ngIf="campoAValidar('name')">
+            Este campo es obligatorio
+          </span>
+        </div>
+      </div>
+
+       <!-- Contraseña -->
+       <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Contraseña</label>
+        <div class="col-sm-9">
+          <input
+            type="password"
+            formControlName="password"
+            class="form-control"
+            placeholder="Contraseña*"
+          />
+
+          <span class="form-text text-danger" *ngIf="campoAValidar('password')">
+            Este campo es obligatorio
+          </span>
+        </div>
+      </div>
+
+       <!-- Confirmar Contraseña -->
+       <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Confirmar la Contraseña</label>
+        <div class="col-sm-9">
+          <input
+            type="password"
+            formControlName="confirmPassword"
+            class="form-control"
+            placeholder="Confirmar Contraseña*"
+          />
+
+          <span class="form-text text-danger" *ngIf="campoAValidar('confirmPassword')">
+            Este campo tiene que coincidir con la contraseña
+          </span>
+
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Email</label>
+        <div class="col-sm-9">
+          <input
+            type="email"
+            class="form-control"
+            formControlName="email"
+            placeholder="Email*"
+          />
+
+          <span class="form-text text-danger" *ngIf="campoAValidar('email')">
+            {{ emailErrorMsg }}
+          </span>
+
+        </div>
+      </div>
+
+      <!-- Checkbox -->
+      <div class="row mb-3">
+        <label class="col-sm-3 col-form-label"></label>
+        <div class="col-sm-9">
+          <div class="form-check">
+            <input
+            class="form-check-input"
+            type="checkbox"
+            formControlName="suscribe"
+            id="flexCheckDefault"
+            />
+            <label class="form-check-label" for="flexCheckDefault">
+              Enviame ofertas promocionales
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Paises -->
+      <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">País</label>
+        <div class="col-sm-9">
+          <select class="form-control" formControlName="country">
+            <option value="">-- Seleccione País --</option>
+            <option *ngFor=" let item of getPaisNombre()" [value]="item">
+              {{ item }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Ciudades -->
+      <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Ciudad</label>
+        <div class="col-sm-9">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="city"
+            placeholder="Ciudad*"
+          />
+
+          <span class="form-text text-danger" *ngIf="campoAValidar('city')">
+            Este campo es obligatorio
+          </span>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <button class="btn btn-primary float-start" [disabled]="miFormulario.invalid || miFormulario.pending" type="submit">
+            {{ (usuario.id )? 'Actualizar' : 'Crear'}}
+          </button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<!-- <h2>Form Valid: {{ miFormulario.valid }}</h2>
+<h2>Form Status: {{ miFormulario.status }}</h2>
+<h2>Form errors</h2>
+<pre>{{ miFormulario.errors | json }}</pre>
+
+<h2>Nombre</h2>
+<pre>{{ miFormulario.controls["name"].errors | json }}</pre>
+
+<h2>Email</h2>
+<pre>{{ miFormulario.controls["email"].errors | json }}</pre>
+
+<h2>Password</h2>
+<pre>{{ miFormulario.controls["password"].errors | json }}</pre>
+
+<h2>confirmPassword</h2>
+<pre>{{ miFormulario.controls["confirmPassword"].errors | json }}</pre>
+
+<h2>Subcribe</h2>
+<pre>{{ miFormulario.controls["suscribe"].errors | json }}</pre>
+
+<h5>Valor del  formulario</h5>
+<pre>{{ miFormulario.value | json}}</pre> -->

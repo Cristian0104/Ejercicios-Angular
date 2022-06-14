@@ -1,0 +1,24 @@
+{
+  "usuarios": [
+    {
+      "id": 3,
+      "name": "a",
+      "password": "a",
+      "confirmPassword": "a",
+      "email": "a2@gmail.com",
+      "suscribe": true,
+      "country": "España",
+      "city": "Madrid"
+    },
+    {
+      "name": "Cristian",
+      "password": "123",
+      "confirmPassword": "123",
+      "email": "cristian@gmail.com",
+      "suscribe": true,
+      "country": "España",
+      "city": "Jaén",
+      "id": 5
+    }
+  ]
+}

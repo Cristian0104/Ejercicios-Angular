@@ -1,0 +1,22 @@
+<h3>Component Communication</h3>
+<hr>
+
+<div class="row border border-primary border-3 rounded">
+  <div class="col">
+      <h3>Parent</h3>
+      <h4 class="text-center">Message: {{messageHijo | uppercase}}</h4>
+      <div class="row">
+        <div class="col-sm4 text-center">
+          <button class="btn btn-primary m-3" (click)="messageService()">Use Service</button>
+          <button class="btn btn-primary m-3" (click)="messageInput()">Use Input Property</button>
+          <button class="btn btn-primary m-3" (click)="messageObservable()">Use Observable</button>
+        </div>
+      </div>
+      <div class="row m-3">
+        <div class="col">
+          <app-hijo [messagePadre]="messagePadre" (outputEvent)="getOutputChild($event)"></app-hijo>
+        </div>
+      </div>
+      <div class="row"></div>
+  </div>
+</div>

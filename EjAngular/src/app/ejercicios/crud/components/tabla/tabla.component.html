@@ -1,0 +1,26 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th> Nombre </th>
+      <th> Correo </th>
+      <th> Suscrito </th>
+      <th> País </th>
+      <th> Ciudad </th>
+      <th> Acciones </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let usuario of usuarios;"
+    class="animate__animated animate__fadeIn animate__faster">
+      <td>{{ usuario.name }}</td>
+      <td>{{ usuario.email }}</td>
+      <td> <i class="{{ usuario.suscribe | suscribe }}"></i></td>
+      <td>{{ usuario.country }}</td>
+      <td>{{ usuario.city }}</td>
+      <td class="icons">
+        <i class="bi bi-pencil" (click)="actualizarUsuario(usuario)"></i>
+        <i class="bi bi-trash3 ms-4" (click)="borrarUsuario(usuario)"></i>
+      </td>
+    </tr>
+  </tbody>
+</table>
