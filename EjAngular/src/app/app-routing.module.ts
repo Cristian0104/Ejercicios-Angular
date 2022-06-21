@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { DisplayHideComponent } from './ejercicios/display/display-hide/display-hide.component';
 import { PadreComponent } from './ejercicios/componentes-comunicadores/pages/padre/padre.component';
+import { LightSwitchComponent } from './ejercicios/light-switch/pages/light-switch/light-switch.component';
 
 
 const  routes: Routes = [
@@ -18,6 +19,10 @@ const  routes: Routes = [
   {
     path: 'crud',
     component: CrudComponent
+  },
+  {
+    path: 'light-switch',
+    component: LightSwitchComponent
   },
   {
     path: '**',

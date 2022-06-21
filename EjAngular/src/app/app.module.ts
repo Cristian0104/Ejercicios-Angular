@@ -1,3 +1,4 @@
+import { LightSwitchModule } from './ejercicios/light-switch/light-switch.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -23,6 +24,7 @@ import { CrudModule } from './ejercicios/crud/crud.module';
     DisplayModule,
     ComponentesComunicadoresModule,
     CrudModule,
+    LightSwitchModule
   ],
   providers: [],
   bootstrap: [AppComponent]

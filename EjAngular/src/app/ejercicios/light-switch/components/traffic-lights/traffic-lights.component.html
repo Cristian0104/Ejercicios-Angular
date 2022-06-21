@@ -1,1 +1,5 @@
-<p>traffic-lights works!</p>
+<div class="container">
+  <div [ngClass]="{circle: true, rojo: estado && color == 'Rojo'}"></div>
+  <div [ngClass]="{circle: true, amarillo: estado && color == 'Amarillo'}"></div>
+  <div [ngClass]="{circle: true, verde: estado && color == 'Verde'}"></div>
+</div>

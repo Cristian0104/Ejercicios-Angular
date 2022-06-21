@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SwitchService } from '../../services/Switch.service';
 
 @Component({
   selector: 'app-traffic-lights',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrafficLightsComponent implements OnInit {
 
-  constructor() { }
+  estado!: boolean;
+
+  color: string = 'Rojo';
+
+  constructor(private serviceSwitch: SwitchService) {
+    this.serviceSwitch.trafficLights = this;
+  }
 
   ngOnInit(): void {
   }
