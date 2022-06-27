@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { DisplayHideComponent } from './ejercicios/display/display-hide/display-hide.component';
 import { PadreComponent } from './ejercicios/componentes-comunicadores/pages/padre/padre.component';
 import { LightSwitchComponent } from './ejercicios/light-switch/pages/light-switch/light-switch.component';
+import { GraphsComponent } from './ejercicios/external-library-graphs/graphs/graphs.component';
 
 
 const  routes: Routes = [
@@ -23,6 +24,10 @@ const  routes: Routes = [
   {
     path: 'light-switch',
     component: LightSwitchComponent
+  },
+  {
+    path: 'graphs',
+    component: GraphsComponent
   },
   {
     path: '**',

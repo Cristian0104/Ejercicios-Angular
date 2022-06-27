@@ -9,6 +9,7 @@ import { SharedModule } from './shared/shared.module';
 import { DisplayModule } from './ejercicios/display/display.module';
 import { ComponentesComunicadoresModule } from './ejercicios/componentes-comunicadores/componentes-comunicadores.module';
 import { CrudModule } from './ejercicios/crud/crud.module';
+import { ExternalLibraryGraphsModule } from './ejercicios/external-library-graphs/external-library-graphs.module';
 
 
 
@@ -24,7 +25,8 @@ import { CrudModule } from './ejercicios/crud/crud.module';
     DisplayModule,
     ComponentesComunicadoresModule,
     CrudModule,
-    LightSwitchModule
+    LightSwitchModule,
+    ExternalLibraryGraphsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

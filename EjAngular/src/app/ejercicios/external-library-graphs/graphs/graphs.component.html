@@ -1,0 +1,26 @@
+<h1>Cuantos Juegos de cada género</h1>
+<hr>
+
+
+
+<div *ngIf="this.pieChartData.datasets[0].data.length === 0; else divGrafica"
+class="alert alert-info">
+Cargando Data...
+</div>
+
+
+
+
+<div class="row">
+  <div class="col">
+    <ng-template #divGrafica>
+    <div class="chart">
+      <canvas baseChart
+        [data]="pieChartData"
+        [type]="pieChartType"
+        [options]="pieChartOptions">
+      </canvas>
+    </div>
+  </ng-template>
+  </div>
+</div>
